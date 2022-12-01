@@ -8,3 +8,4 @@ function tempConvert(celsius){
 console.log(tempConvert(18.5));
 console.log("Thanks!");
 console.log("Good Bye!");
+console.log("Hi");
