@@ -2,53 +2,8 @@
 
 // var question = window.prompt("Do you want to convert a value ? (yes or no)")
 
-while (question != "yes" && question != "no"){
-    var question = window.prompt("Do you want to convert a value ? (yes or no)")
-    console.log("Please select a valid word between yes or no")
-    // var question = window.prompt("Do you want to convert a value ? (yes or no)")
 
-    if (question == "no"){
-        // question = "no"
-        console.log("Thank you!")}
-
-    else if(question == "yes"){
-        // question = "yes"
-
-        var userInput = window.prompt("Which conversion ? (CelsiusToFarenheit / chfToFcfa / fcfaToChf)");
-
-        while(userInput != "CelsiusToFarenheit" && userInput != "chfToFcfa "  && userInput != "fcfaToChf "){
-
-
-            console.log("Please select a valid conversion.");
-            userInput = window.prompt("Which conversion ? (CelsiusToFarenheit / chfToFcfa / fcfaToChf)")}
-       
-
-        if (userInput == "CelsiustoFarenheit"){
-            userInput = "CelsiustoFarenheit"
-
-            console.log(CelsiusConverter());
-           
-    }
-    
-        else if ( userInput == "chfToFcfa"){
-            userInput = "chfToFcfa"
-            console.log(chfConverter());
-            
-    }
-    
-        else if (userInput = "fcfaToChf"){
-            userInput = "fcfaToChf"
-            console.log(fcfaConverter());
-            
-            
-    }
-}
-  
-    }
-
-
-
-function CelsiusConverter(celsiusNumber){
+function CelsiusConverter(){
     var celsius = window.prompt("Which value do you want to convert ?")
     try{
         var celsiusNumber = Number(celsius);
@@ -64,7 +19,7 @@ function CelsiusConverter(celsiusNumber){
      
      }
      
-function chfConverter(chfNumber){
+function chfConverter(){
     var chf = window.prompt("Which value do you want to convert ?")
     try{
         var chfNumber = Number(chf);
@@ -79,7 +34,7 @@ function chfConverter(chfNumber){
      
      }
      
-function fcfaConverter(fcfaNumber){
+function fcfaConverter(){
     var fcfa = window.prompt("Which value do you want to convert ?")
     try{
         var fcfaNumber = Number(fcfa);
@@ -90,9 +45,54 @@ function fcfaConverter(fcfaNumber){
          }
     var chf = fcfaNumber / 650;
     var message = "The result is " + chf.toString() + " CHF!";
-    return message;
-     
-     }
+    return message;}
+
+while (question != "yes" && question != "no"){
+    var question = window.prompt("Do you want to convert a value ? (yes or no)")
+    console.log("Please select a valid word between yes or no")
+    // var question = window.prompt("Do you want to convert a value ? (yes or no)")
+
+    if (question == "no"){
+        // question = "no"
+        console.log("Thank you!")}
+
+    else if(question == "yes"){
+        // question = "yes"
+
+        var userInput = window.prompt("Which conversion ? (CelsiusToFarenheit / chfToFcfa / fcfaToChf)");
+
+        // while(userInput != "CelsiusToFarenheit" && userInput != "chfToFcfa "  && userInput != "fcfaToChf "){
+
+
+        //     console.log("Please select a valid conversion.");
+        //     userInput = window.prompt("Which conversion ? (CelsiusToFarenheit / chfToFcfa / fcfaToChf)")}
+       
+
+        if (userInput == "CelsiustoFarenheit"){
+            // userInput = "CelsiustoFarenheit"
+
+            console.log(CelsiusConverter());
+           
+    }
+    
+        else if ( userInput == "chfToFcfa"){
+            // userInput = "chfToFcfa"
+            console.log(chfConverter());
+            
+    }
+    
+        else if (userInput = "fcfaToChf"){
+            // userInput = "fcfaToChf"
+            console.log(fcfaConverter());
+            
+            
+    } else {
+        console.log("Sorry you did not enter a valid conversion type.")
+    }
+}}
+  
+    
+
 // console.log("Thank you!");
 
 

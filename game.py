@@ -4,7 +4,7 @@ secret_number =random.randint(1, 101)
 user_wins = False
 attemps = 0
 
-while user_wins != False:          #Loop of the game
+while user_wins != True:          #Loop of the game
 
     User_input = input("Enter the secret number between 1 and 100 : ")    # Get user input
 
