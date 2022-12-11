@@ -16,7 +16,7 @@ def ask_to_continue():
 
 def conversion_type():
     user_answer = input("What do you want to convert ? (chf_to_fcfa / celsius_to_farenheit / fcfa_to_chf")
-    return conversion_type
+    return user_answer
 
 def ask_the_value():
     user_value = input("Enter the value you want to convert :")
@@ -34,13 +34,13 @@ while ask_to_continue():
 
 
     if user_answer == "chf_to_fcfa":
-        result_message += str(chf_to_fcfa(user_number)) + " FCFA."
+        result_message += str(chf_to_fcfa(int(user_number))) + " FCFA."
 
     elif user_answer == "celsius_to_farenheit":
-        result_message += str(celsius_to_farenheit(user_number)) + " Farenheit."
+        result_message += str(celsius_to_farenheit(int(user_number))) + " Farenheit."
 
     elif user_answer == "fcfa_to_chf":
-        result_message += str(fcfa_to_chf(user_number)) + " CHF."
+        result_message += str(fcfa_to_chf(int(user_number))) + " CHF."
 
     else:
         result_message = " You did not enter a valid conversion type."
