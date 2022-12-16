@@ -4,7 +4,7 @@ content = text_file.read()
 #     print(line)
 text_file.close()
 
-new_text1 = content.replace("\n", " ").replace("-", "").replace(".", "").replace("*", "").replace("!", "").replace(",", "").replace("  ", "").replace("'", "").strip()
+new_text1 = content.replace("\n", " ").replace("-", "").replace(".", "").replace("*", "").replace("!", "").replace(",", "").replace("  ", "").replace("'", " ").strip()
 
 # print(new_text1)
 
