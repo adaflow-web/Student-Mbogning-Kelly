@@ -14,15 +14,15 @@ def write_note(text):
 
 
 def searh(text):
-    file = open("note.txt")
+    file = open("Diving_into_python/note.txt")
     content = file.read()
     file.close()
     result = ""
-    notes = content.split("...")
+    notes = content.split("----")
 
     for note in notes:
         if note.find(text) != -1:
-            result = result + "\n" + note
+            result = result + "\n----" + note
 
     if result == "":
         print("Nothing found")
@@ -36,8 +36,8 @@ if user_input == "1":
 
 elif user_input == "2":
     user_note = input("Enter the text to search: ")
-    user_note_strip = user_note.strip()
-    searh(user_note_strip)
+    note = user_note.strip()
+    searh(note)
 
 else:
     print("Sorry, you did not press 1 or 2 ")
