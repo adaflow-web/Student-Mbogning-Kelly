@@ -1,13 +1,13 @@
 # Create a note
 def write_note(text):
-    file = open("noteapp.txt", "a")
+    file = open("Diving_into_python/noteapp.txt", "a")
     file.write("----\n")
     file.write(text + "\n")
     file.close()
 
 # Search through notes
 def search(text):
-    file = open("noteapp.txt")
+    file = open("Diving_into_python/noteapp.txt")
     content = file.read()
     file.close()
     result = ""

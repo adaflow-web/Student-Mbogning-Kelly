@@ -1,19 +1,10 @@
-print("What do you want to do ?")
-print("Press 1 for adding a note. ")
-print("Press 2 for searching a note. ")
-user_input = input(": ")
-
-
-    
-
 def write_note(text):
     file = open("Diving_into_python/note.txt", "a")
-    # file.write("\n")
+    file.write("\n")
     file.write(text + "\n")
     file.close()
 
-
-def searh(text):
+def search(text):
     file = open("Diving_into_python/note.txt")
     content = file.read()
     file.close()
@@ -22,22 +13,28 @@ def searh(text):
 
     for note in notes:
         if note.find(text) != -1:
-            result = result + "\n----" + note
+            result += "\n----" + note
 
     if result == "":
         print("Nothing found")
     else:
         print(result)
 
+print("What do you want to do ?")
+print("Press 1 for adding a note. ")
+print("Press 2 for searching a note. ")
+user_input = input(": ")
+
+    
 if user_input == "1":
     user_note = input("Enter your note: ")
     user_note = user_note.strip()
     write_note(user_note)
 
 elif user_input == "2":
-    user_note = input("Enter the text to search: ")
-    note = user_note.strip()
-    searh(note)
+    print("Enter the text to search: ")
+    text = input().strip()
+    search(text)
 
 else:
     print("Sorry, you did not press 1 or 2 ")
