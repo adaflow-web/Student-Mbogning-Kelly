@@ -8,8 +8,11 @@ while (userWins != false){
     userInput = window.prompt("Enter the secret number between 1 and 101: ");
 
     try {
+        if ((isNaN(userInput)) || userInput == ""){
+            alert("You have not entered a number. Try again...")
+        } else{
         var userNumber = Number(userInput);
-    }
+    }}
     catch{
         console.log("You did not enter a number.")
     }
