@@ -9,7 +9,7 @@ while (userWins != false){
 
     try {
         if ((isNaN(userInput)) || userInput == ""){
-            alert("You have not entered a number. Try again...")
+            alert("Please enter a number.")
         } else{
         var userNumber = Number(userInput);
     }}
