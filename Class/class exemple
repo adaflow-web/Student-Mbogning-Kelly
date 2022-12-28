@@ -1,0 +1,13 @@
+Object: Remote control
+
+Properties:
+- weight
+- Color
+- Size
+- lenght
+
+Methods:
+- Manage chanels
+- Manage volume
+- Manage Tv properties
+- Off / On TV
