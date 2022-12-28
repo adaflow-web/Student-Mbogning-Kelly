@@ -1,0 +1,7 @@
+class Cat:
+    name = ""
+    species = ""
+    weight = "0"
+    color = ""
+tom = Cat()
+print(tom)
