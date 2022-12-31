@@ -94,4 +94,172 @@ var album = {
   for (var key in album) {
     console.log(key + ": " + album[key]);
   }
+
+// Particular case of equality in JavaScript
+var string = "42";
+var number = 42;
+
+    // Returns true because the values are equal
+console.log(string == number);
+
+    // Returns false because the data types are not the same
+console.log(string === number);
+
+// typeof "three" === typeof "four" 
+// typeof "three" === typeof 4
+
+
+// Adding method to an object
+
+var person = {
+    name: "Bob",
+    age: 27,
+    sayHi: function() {
+      console.log("Hi. I'm Bob.");
+    }
+  }
   
+  // Calling the sayHi method on the person object
+  person.sayHi();
+
+
+//   Using this
+var person = {
+    name: "Bob",
+    age: 27,
+    sayHi: function() {
+      console.log("Hi. I'm " + this.name + ".");
+    }
+  }
+  
+  person.sayHi();
+
+  
+  var person = {
+    name: "Bob",
+    age: 27,
+    sayHi: function() {
+      console.log("Hi. I'm " + this.name + ".");
+    },
+    callMe: function() {
+      console.log(this);
+    }
+  }
+  
+  person.callMe();
+
+  
+// Call one, call two, call many
+
+// Represent an enemy
+var enemy = {
+    healthPoints: 150,
+    strength: 20,
+    threaten: function() {
+      console.log("I'm going to destroy you!");
+    },
+    callForHelp: function() {
+      console.log("Come help me!");
+    }
+  }
+  
+  // The enemy threaten the player
+  enemy.threaten();
+  
+  // The enemy calls for more baddies to the rescue
+  enemy.callForHelp();
+
+  
+// Represent an enemy
+var enemy = {
+    healthPoints: 150,
+    strength: 20,
+    threaten: function() {
+      console.log("I'm going to destroy you!");
+    },
+    callForHelp: function() {
+      console.log("Come help me!");
+    }
+  }
+  
+  // Represent a second enemy
+  var enemyTwo = {
+    healthPoints: 150,
+    strength: 20,
+    threaten: function() {
+      console.log("I'm going to destroy you!");
+    },
+    callForHelp: function() {
+      console.log("Come help me!");
+    }
+  }
+  
+  // Represent a third enemy
+  var enemyThree = {
+    healthPoints: 150,
+    strength: 20,
+    threaten: function() {
+      console.log("I'm going to destroy you!");
+    },
+    callForHelp: function() {
+      console.log("Come help me!");
+    }
+  }
+
+  
+// Constructor function
+
+function Enemy(healthPoints, strength) {
+    this.healthPoints = healthPoints;
+    this.strength = strength;
+    this.threaten = function() {
+      console.log("I'm going to destroy you!");
+    }
+    this.callForHelp = function() {
+      console.log("Come help me!");
+    }
+  }
+  
+  var meenie = new Enemy(150, 20);
+  var miny = new Enemy(160, 15);
+  var moe = new Enemy(110, 30);
+  
+  meenie.callForHelp();
+  console.log("Moe has " + moe.healthPoints + " health points.");
+  miny.threaten();
+  
+  console.log(meenie);
+
+  
+// Sharing method
+
+// function Person(name){
+//     this.name = name;
+//     this.sayHello = function(){
+//         console.log("Hello! I'am " + this.name)
+//     }
+// }
+// var Sonia = new Person("Sonia")
+// var Pearl = new Person("Pearl")
+
+// Sonia.sayHello();
+// Pearl.sayHello();
+
+function Person(name) {
+    this.name = name;
+  }
+  
+  Person.prototype.sayHello = function() {
+    console.log("Hello! I am " + this.name);
+  }
+  
+  var maggie = new Person("Maggie");
+  var glenn = new Person("Glenn");
+  
+  // Check that it still works
+  maggie.sayHello();
+  
+  // Check that the method is now shared
+  console.log(maggie.sayHello === glenn.sayHello);
+  
+
