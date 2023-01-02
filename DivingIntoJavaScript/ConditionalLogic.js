@@ -261,5 +261,25 @@ function Person(name) {
   
   // Check that the method is now shared
   console.log(maggie.sayHello === glenn.sayHello);
+
+
+  // string interpolation
+  const message = "Hello";
+const name = "Rick";
+
+// Using concatenation
+let greetings = message + " " + name + "!";
+console.log(greetings);
+
+// Using interpolation
+greetings = `${message} ${name}!`;
+console.log(greetings);
+
+
+
+console.log(`two plus two equals ${2 + 2}.`);
+
+
+
   
 
