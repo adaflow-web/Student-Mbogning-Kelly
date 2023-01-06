@@ -7,6 +7,7 @@ const add2 = document.getElementById("add2")
 const myButton2 = document.getElementById("myButton2")
 const main = document.getElementById("main")
 const buttonRemove = document.getElementById("buttonRemove")
+const buttonRemove2 = document.getElementById("buttonRemove2")
 
 
 
@@ -40,5 +41,17 @@ function removeadd(){
     } else{
         alert ("There is nothing in the paragraph.")
     }
+    // add.removeChild(paragraphs[0]);
 }
 buttonRemove.addEventListener("click",removeadd)
+
+function removeadd2(){
+    const paragraphs2 = document.getElementsByClassName("beautifull1");
+    if (paragraphs2.length > 0){
+        add2.removeChild(paragraphs2[0]);
+     } 
+     else {
+        alert("There is no text in this paragraph.");
+    }
+}
+buttonRemove2.addEventListener("click", removeadd2);
