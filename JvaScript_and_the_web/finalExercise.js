@@ -10,7 +10,7 @@ function addvalue(){
     newParagraph.innerText = Text.value;
     newParagraph.className = "nice"
     para.appendChild(newParagraph)
-    localStorage.setItem()
+    Text.value = "";
 }
 adding.addEventListener("click", addvalue)
 
@@ -21,7 +21,7 @@ function remove(){
     } else{
         alert("There is nothing")
     }
-    localStorage.setItem()
+    
 }
 first.addEventListener("click",remove)
 
@@ -32,13 +32,20 @@ function remove1(){
     } else{
         alert("There is no text")
     }
-    localStorage.setItem()
+    
 }
 last.addEventListener("click", remove1)
 
-function clearAll(){
-    para.clear();
+function clearA(){
+    const removeparagraph2 = document.getElementsByClassName("nice")
+    while (para.firstChild){
+        para.removeChild(para.firstChild)
+    }
+    // if (removeparagraph2.length > 0){
+    
+    // } else{
+    //     alert("There is no Text")
+    // }
 }
-clearme.addEventListener("click", clearAll)
+clearme.addEventListener("click", clearA)
 
-localStorage.setItem()
