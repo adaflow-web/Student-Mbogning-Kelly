@@ -14,13 +14,26 @@ function addvalue(){
 }
 adding.addEventListener("click", addvalue)
 
+add.onclick = () => {
+    const user = {
+        nom: para.value
+
+    }
+    localStorage.setItem("nom", JSON.stringify(user))
+}
+
+// adding.addEventListener("click", ("nom", Text.value))
+
+// if (localStorage.getItem("") != null)
+
 function remove(){
     const removeparagraph = document.getElementsByClassName("nice")
     if (removeparagraph.length > 0){
         para.removeChild(removeparagraph[0])
-    } else{
-        alert("There is nothing")
-    }
+    } 
+    // else{
+    //     alert("There is nothing")
+    // }
     
 }
 first.addEventListener("click",remove)
@@ -28,10 +41,10 @@ first.addEventListener("click",remove)
 function remove1(){
     const removeparagraph1 = document.getElementsByClassName("nice")
     if (removeparagraph1.length > 0){
-        para.removeChild(removeparagraph1[removeparagraph1.length-1])
-    } else{
-        alert("There is no text")
-    }
+        para.removeChild(removeparagraph1[removeparagraph1.length-1])}
+    // } else{
+    //     alert("There is no text")
+    // }
     
 }
 last.addEventListener("click", remove1)
@@ -48,4 +61,19 @@ function clearA(){
     // }
 }
 clearme.addEventListener("click", clearA)
+
+clearme.onclick = () => {
+    localStorage.clear();
+    document.location.reload(); //permet de recharger la page 
+}
+
+var pageInfo = {
+    para : para,
+    Text : Text,
+    adding : add,
+    last : last,
+    clearme : clearme,
+    first : first,
+}
+localStorage.setItem("pageInfo", pageInfo )
 
