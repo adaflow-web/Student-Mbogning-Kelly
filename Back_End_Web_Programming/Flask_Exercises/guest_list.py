@@ -20,7 +20,8 @@ def get_names():
     name = open("guestdb.txt")
     content = name.read()
     name.close()
-    names = content.split(" ").sort()
+    names = content.split("\n")
+    # sort_names = names.sorted()
     return names
 
 @app.route("/guests")
@@ -31,4 +32,8 @@ def guest_page():
     for name in names:
         actual_value += "<p>" + name + "</p>"
     return pagee_html.replace("$$NAMES$$", actual_value)
+
+# @app.route("/page1.html")
+# def page1():
+#     return get_pages("page1.html")
 
