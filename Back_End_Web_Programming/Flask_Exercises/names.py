@@ -13,6 +13,7 @@ def get_names():
     content = file.read()
     file.close()
     names = content.split("\n")
+    # names.pop(len(names)-1)
     return names
 
 @app.route("/")
