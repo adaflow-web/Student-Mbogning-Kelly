@@ -8,15 +8,38 @@ def get_page(page):
     file.close()
     return content
 
+def get_names():
+    file = open("namesdb.txt")
+    content = file.read()
+    file.close()
+    names = content.split("\n")
+    return names
+
 @app.route("/")
 def welcome_page():
     return get_page("welcome_page.html")
 
 @app.route("/names")
 def names():
-    return get_page("names.html")
+    html_page = get_page("names.html")
+    names = get_names()
+
+    actual_values = ""
+    for name in names:
+        actual_values += "<p>" + name + "</p>"
+
+    return html_page.replace("$$NAMES$$", actual_values)
 
 @app.route("/search")
 def search():
+    html_page = get_page("names.html")
     message = flask.request.args.get("q")
-    return message
+    names = get_names()
+
+    result = ""
+    for name in names:
+        if name.lower().find(message.lower()) != -1:
+            result += "<p>" + name + "</p>"
+    if result == "":
+        result = "<p> No result found </p>"
+    return html_page.replace("$$NAMES", result)
