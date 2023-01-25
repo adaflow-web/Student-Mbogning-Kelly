@@ -78,8 +78,12 @@ def search():
 
 @app.route("/all")
 def all_note():
-    allnotes = add()
-    return allnotes
+    page_html = get_page("note.html")
+    getnote = get_note()
+    final = ""
+    for i in getnote:
+        final += "<p>" + i + "</p>"
+    return page_html.replace("$$NOTES$$",final)
 
 
     
