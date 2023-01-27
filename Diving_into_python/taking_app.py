@@ -31,7 +31,7 @@ answer = input(": ")
 # Execute task based on menu input
 if answer == "1":
     print("Enter your note:")
-    note = input().strip()
+    note = input()
     write_note(note)
 elif answer == "2":
     print("Enter the text to search:")
