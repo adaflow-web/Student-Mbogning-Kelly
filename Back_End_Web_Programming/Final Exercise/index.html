@@ -8,6 +8,69 @@
         <link rel="stylesheet" href="style1.css">
     </head>
     <body>
+        <header>
+            <nav>
+                <ul>
+                    <li id="logo"><a href="#">AppNote</a></li>
+                    <li><a href="#Addnote">Add Note</a></li>
+                    <li><a href="#Searchnote">Search Note</a></li>
+                    <li><a href="#Allnotes">All Notes</a></li>
+                    <li><a href="#contact">Nous contacter</a></li>
+                </ul>
+            </nav>
+            <div id="imagePrincipale">
+                <h1>Kelly APP</h1>
+                <div id="premierTrait"></div>
+                <h3>Power House</h3>
+            </div>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+        </header>
+        <section id="presentation">
+            <div id="textIntro">
+                <h2>Un lieu unique pour un apprentissage ideal.</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus est quam neque fugiat ex 
+                    sit vitae repellendus deserunt consequatur impedit molestiae odit recusandae sed, quo soluta
+                    , obcaecati consequuntur sint incidunt.
+                </p>
+            </div>
+            <div id="prestations">
+                <div class="imagesPrestations">
+                    <h4>Nous visiter</h4>
+                    <a href="#"><img src="photos/AWS.png" alt="ima"></a>
+                </div>
+                <div class="imagesPrestations">
+                    <h4>Welcome</h4>
+                    <a href="#"><img src="photos/exts.jpg" alt="exts"></a>
+
+                </div>
+                <div class="imagesPrestations">
+                    <h4>Commencer le cours</h4>
+                    <a href="#"><img src="photos/image1.jpeg" alt="1"></a>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="tourisme">
+            <h2>Et tant a apprendre</h2>
+            <ul>
+                <li id="Powercoders"> Powercoders</li>
+                <li id="42Lausanne"><p>42 Lausanne</p></li>
+                <li id="Others"><p>Others</p></li>
+            </ul>
+        </section>
+
+    
+
+        <p id="para">
+            <h1 id="welcome">
+                Welcome to my Web Note App
+            </h1>
+        </p><br><br>
+        <p id="img">
+            <img src="backend-for-frontend-pattern.png" alt="pic">
+        </p>
         <form action="/welcome" method="get">
         <input type="text" placeholder="Enter username" id="Text" class="text" name="q">
         <input type="submit" value="Submit" id="wel">
@@ -16,7 +79,7 @@
     <br><br><br>
 
     <form action="/Add" method="get">
-        <input type="text" placeholder="Note to add" id="add" class="adding" name="a">
+        <input placeholder="Note to add" type="text" id="add" class="adding" name="a">
         <input type="submit" value="Add" id="adding">
     </form>
 
@@ -31,6 +94,27 @@
     <form action="/all" method="get">
         <input type="submit" value="All notes" id="all">
     </form>
+
+    <footer>
+        <h2>Contactez-nous</h2>
+        <form>
+            <input placeholder="Nom" type="text">
+            <input type="text" placeholder="email">
+            <textarea name="" placeholder="Votre message ici..."></textarea>
+            <button>Send</button>
+        </form>
+        <div id="deuxiemeTrait"></div>
+        <div id="copyrightEtIcons">
+            <div id="copyright">
+                <span>@ Kelly 2023</span>
+            </div>
+            <div id="icons">
+                <a href="http://www.twiter.fr"><i class="fa fa-twitter"></i></a>
+                <a href="http://www.facebook.fr"><i class="fa fa-facebook"></i></a>
+                <a href="http://www.intagram.fr"><i class="fa fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
 
     
 
