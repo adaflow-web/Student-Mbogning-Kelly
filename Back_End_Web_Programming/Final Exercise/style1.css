@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,200;1,200&family=Dancing+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@1,200&family=Dancing+Script&display=swap');
 
+html{
+    scroll-behavior: smooth;
+}
 body{
     font-family: 'Advent Pro', sans-serif;
     padding: 0;
@@ -221,5 +224,19 @@ button:hover{
     width: 50%;
     text-align: left;
     color: blueviolet;
+    text-align: right;
+}
+
+#icons a{
+    display: inline-block;
+    margin: 0 15px;
+    font-size: 1.3em;
+    color: black;
+}
+
+#icons a:hover{
+    transform: scale(1.5);
+    transition: 0.3s
+
 }
 
