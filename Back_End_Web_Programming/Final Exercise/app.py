@@ -85,7 +85,12 @@ def all_note():
         final += "<p>" + i + "</p>"
     return page_html.replace("$$NOTES$$",final)
 
-
+@app.route("/del")
+def clearA():
+     page_html = get_page("note.html")
+     
+     return page_html.replace("$$NOTES$$","")
+    
     
 
 
