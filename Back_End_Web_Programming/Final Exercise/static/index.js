@@ -1,4 +1,4 @@
-const del = document.getElementById("delete")
+const del = document.getElementById("dele")
 const para = document.getElementById("para")
 
 function clearA(){
